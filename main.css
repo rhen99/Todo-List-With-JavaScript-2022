@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f4f4f4;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.container {
+  width: 80%;
+
+  margin: auto;
+  margin-top: 30%;
+}
+form {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+.form-main-input,
+.form-time-input {
+  padding-bottom: 0.5rem;
+}
+.todo-input {
+  width: 100%;
+}
+.form-time-input {
+  display: flex;
+}
+.form-time-input > div {
+  flex: 1;
+}
+input,
+select {
+  width: 100%;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-family: "Shadows Into Light", cursive;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+input:focus,
+select:focus {
+  border-bottom: 2px solid gold;
+  outline: none;
+}
+.submit-todo {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.5rem 0;
+  background-color: gold;
+}
+
+.todos {
+  padding: 1rem 0;
+}
+.todo {
+  animation: show 1s forwards;
+  background-color: #fff;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-left: 5px solid gold;
+}
+.todo button {
+  background: none;
+  border: none;
+  padding: 0 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.todo-check {
+  color: green;
+}
+.todo-x {
+  color: red;
+}
+.time {
+  font-size: 19px;
+  color: #dab903;
+  display: inline-block;
+  margin-right: 5px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 40%;
+  }
+}
+@keyframes show {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
